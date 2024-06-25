@@ -37,7 +37,7 @@ DB_DATABASE=
 
 ***step 3***
 ```
-$ sudo docker-compose up -d --build --no-cache
+$ sudo docker-compose up -d --build --no-deps
 ```
 
 ## Contributor
