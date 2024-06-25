@@ -14,5 +14,7 @@ func main() {
 	controller := wire.InitializeController()
 	routes.Router(app, controller)
 
-	app.Listen(":3000")
+	if err := app.Listen(":3001"); err != nil {
+		panic(err.Error())
+	}
 }

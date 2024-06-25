@@ -7,8 +7,5 @@ import (
 )
 
 func Router(app *fiber.App, allController *controllers.AllController) {
-
 	app.Get("/", allController.WebhookWebchatController.CreateMessage)
-	app.Get("/testEncode64", allController.WebhookWebchatController.TestEncode64)
-
 }

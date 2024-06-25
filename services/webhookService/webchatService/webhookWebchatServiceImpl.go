@@ -55,7 +55,6 @@ func (wwsi *WebhookWebchatServiceImpl) WebhookWebchat(c *fiber.Ctx, senderId int
 	_, err = wwsi.webhookWebchatRepository.CreateMessage("", room.Id, resultMessageTypeText, user)
 	if err != nil {
 		log.Println("wwsi.webhookWebchatRepository.CreateMessage('', room.Id, resultMessageTypeText, user)")
-		log.Println(err.Error())
 		return user, nil
 	}
 
@@ -87,19 +86,21 @@ func (wwsi *WebhookWebchatServiceImpl) WebhookWebchat(c *fiber.Ctx, senderId int
 	var dataResult map[string]any
 	err = json.Unmarshal(backendServiceHitLoginResponseByte, &dataResult)
 	if err != nil {
-		panic(err.Error())
+		fmt.Println("json.Unmarshal(backendServiceHitLoginResponseByte, &dataResult)")
+		return nil, err
 	}
 
 	integrationAppId, err := wwsi.webhookWebchatRepository.GetIntegrationJoinByAppId(integration.AppId)
 	if err != nil {
-		fmt.Println("aa")
-		panic(err.Error())
+		fmt.Println("wwsi.webhookWebchatRepository.GetIntegrationJoinByAppId(integration.AppId)")
+		return nil, err
 	}
 
 	var Integration_IntegrationData map[string]interface{}
 	err = json.Unmarshal([]byte((*integrationAppId)["integration_data"].(string)), &Integration_IntegrationData)
 	if err != nil {
-		panic(err.Error())
+		fmt.Println("json.Unmarshal([]byte((*integrationAppId)['integration_data'].(string)), &Integration_IntegrationData)")
+		return nil, err
 	}
 	var botId int = int(Integration_IntegrationData["botId"].(float64))
 
@@ -120,7 +121,8 @@ func (wwsi *WebhookWebchatServiceImpl) WebhookWebchat(c *fiber.Ctx, senderId int
 	var dataResultNlpResponse map[string]any
 	err = json.Unmarshal(nlpResponseAsyncChannelResponseByte, &dataResultNlpResponse)
 	if err != nil {
-		panic(err.Error())
+		fmt.Println("json.Unmarshal(nlpResponseAsyncChannelResponseByte, &dataResultNlpResponse)")
+		return nil, err
 	}
 
 	return dataResultNlpResponse, nil
