@@ -11,10 +11,10 @@
 This project is built with Golang and several libraries/frameworks
 special thanks:
 - **[Fiber v2.52.4](https://github.com/gofiber/fiber)**
-- **[wire v0.6.0](https://github.com/gofiber/fiber)**
-- **[godotenv v1.5.1](https://github.com/gofiber/fiber)**
-- **[postgres v1.5.9](https://github.com/gofiber/fiber)**
-- **[gorm v1.25.10](https://github.com/gofiber/fiber)**
+- **[wire v0.6.0](https://github.com/google/wirer)**
+- **[godotenv v1.5.1](https://github.com/joho/godotenv)**
+- **[gorm v1.25.10](https://gorm.io/index.html)**
+- **[validator v10.22.0](https://github.com/go-playground/validator)**
 
 ## Available Scripts Clonning Project
 
@@ -22,7 +22,7 @@ In the project directory, you can run:
 
 ***step 1***
 ```
-$ git clone
+$ git clone `url_this_project`
 ```
 
 ***step 2***

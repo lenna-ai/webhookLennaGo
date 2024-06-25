@@ -12,7 +12,6 @@ type WebhookWebchatControllerImpl struct {
 
 type WebhookWebchatController interface {
 	CreateMessage(c *fiber.Ctx) error
-	TestEncode64(c *fiber.Ctx) error
 }
 
 func NewWebhookWebchatController(webhookWebchatService webchatservice.WebhookWebchatService) *WebhookWebchatControllerImpl {
