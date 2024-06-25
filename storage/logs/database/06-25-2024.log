@@ -1273,3 +1273,165 @@
 
 2024/06/25 14:12:03 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:27
 [19.411ms] [rows:1] SELECT * FROM "omnichannel"."integrations" inner join omnichannel.channels on omnichannel.integrations.channel_id = omnichannel.channels.id WHERE omnichannel.integrations.app_id = 544 and omnichannel.channels.name = 'bot' and omnichannel.integrations.status = true
+
+2024/06/25 14:20:21 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:16
+[111.262ms] [rows:1] SELECT * FROM "omnichannel"."integrations" WHERE id = 1098 LIMIT 1
+
+2024/06/25 14:20:21 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:37
+[43.650ms] [rows:1] SELECT * FROM "app"."users" WHERE id = 1524940 LIMIT 1
+
+2024/06/25 14:20:21 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:47
+[27.049ms] [rows:1] SELECT * FROM "omnichannel"."rooms" WHERE created_by = 1524940 LIMIT 1
+
+2024/06/25 14:20:21 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:79 ERROR: invalid input syntax for type json (SQLSTATE 22P02)
+[52.289ms] [rows:0] INSERT INTO "omnichannel"."messages" ("channel_data","room_id","messageable_type","messageable_id","content","data","deleted_at","created_at","updated_at","encrypt","is_discussion","ticket_id","user_id","channel_message_id") VALUES ('',1083260,'user',1524940,'','','0000-00-00 00:00:00','2024-06-25 14:20:21.812','2024-06-25 14:20:21.812',false,false,0,0,0) RETURNING "id"
+
+2024/06/25 14:20:21 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:89
+[86.300ms] [rows:1] SELECT * FROM "omnichannel"."interactions" WHERE userable_id = 1524940 and room_id = 1083260 and date(created_at) = '2024-06-25'
+
+2024/06/25 14:20:22 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:27
+[24.469ms] [rows:1] SELECT * FROM "omnichannel"."integrations" inner join omnichannel.channels on omnichannel.integrations.channel_id = omnichannel.channels.id WHERE omnichannel.integrations.app_id = 544 and omnichannel.channels.name = 'bot' and omnichannel.integrations.status = true
+
+2024/06/25 14:20:25 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:16
+[33.205ms] [rows:1] SELECT * FROM "omnichannel"."integrations" WHERE id = 1098 LIMIT 1
+
+2024/06/25 14:20:25 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:37
+[19.324ms] [rows:1] SELECT * FROM "app"."users" WHERE id = 1524940 LIMIT 1
+
+2024/06/25 14:20:25 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:47
+[17.042ms] [rows:1] SELECT * FROM "omnichannel"."rooms" WHERE created_by = 1524940 LIMIT 1
+
+2024/06/25 14:20:25 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:79 ERROR: invalid input syntax for type json (SQLSTATE 22P02)
+[49.320ms] [rows:0] INSERT INTO "omnichannel"."messages" ("channel_data","room_id","messageable_type","messageable_id","content","data","deleted_at","created_at","updated_at","encrypt","is_discussion","ticket_id","user_id","channel_message_id") VALUES ('',1083260,'user',1524940,'','','0000-00-00 00:00:00','2024-06-25 14:20:25.367','2024-06-25 14:20:25.367',false,false,0,0,0) RETURNING "id"
+
+2024/06/25 14:20:25 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:89
+[28.379ms] [rows:1] SELECT * FROM "omnichannel"."interactions" WHERE userable_id = 1524940 and room_id = 1083260 and date(created_at) = '2024-06-25'
+
+2024/06/25 14:20:25 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:27
+[18.070ms] [rows:1] SELECT * FROM "omnichannel"."integrations" inner join omnichannel.channels on omnichannel.integrations.channel_id = omnichannel.channels.id WHERE omnichannel.integrations.app_id = 544 and omnichannel.channels.name = 'bot' and omnichannel.integrations.status = true
+
+2024/06/25 14:20:27 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:16
+[36.618ms] [rows:1] SELECT * FROM "omnichannel"."integrations" WHERE id = 1098 LIMIT 1
+
+2024/06/25 14:20:27 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:37
+[16.833ms] [rows:1] SELECT * FROM "app"."users" WHERE id = 1524940 LIMIT 1
+
+2024/06/25 14:20:27 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:47
+[17.450ms] [rows:1] SELECT * FROM "omnichannel"."rooms" WHERE created_by = 1524940 LIMIT 1
+
+2024/06/25 14:20:27 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:79 ERROR: invalid input syntax for type json (SQLSTATE 22P02)
+[63.943ms] [rows:0] INSERT INTO "omnichannel"."messages" ("channel_data","room_id","messageable_type","messageable_id","content","data","deleted_at","created_at","updated_at","encrypt","is_discussion","ticket_id","user_id","channel_message_id") VALUES ('',1083260,'user',1524940,'','','0000-00-00 00:00:00','2024-06-25 14:20:27.243','2024-06-25 14:20:27.243',false,false,0,0,0) RETURNING "id"
+
+2024/06/25 14:20:27 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:89
+[28.567ms] [rows:1] SELECT * FROM "omnichannel"."interactions" WHERE userable_id = 1524940 and room_id = 1083260 and date(created_at) = '2024-06-25'
+
+2024/06/25 14:20:27 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:27
+[18.371ms] [rows:1] SELECT * FROM "omnichannel"."integrations" inner join omnichannel.channels on omnichannel.integrations.channel_id = omnichannel.channels.id WHERE omnichannel.integrations.app_id = 544 and omnichannel.channels.name = 'bot' and omnichannel.integrations.status = true
+
+2024/06/25 14:20:29 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:16
+[33.634ms] [rows:1] SELECT * FROM "omnichannel"."integrations" WHERE id = 1098 LIMIT 1
+
+2024/06/25 14:20:29 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:37
+[17.194ms] [rows:1] SELECT * FROM "app"."users" WHERE id = 1524940 LIMIT 1
+
+2024/06/25 14:20:29 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:47
+[24.186ms] [rows:1] SELECT * FROM "omnichannel"."rooms" WHERE created_by = 1524940 LIMIT 1
+
+2024/06/25 14:20:29 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:79 ERROR: invalid input syntax for type json (SQLSTATE 22P02)
+[57.962ms] [rows:0] INSERT INTO "omnichannel"."messages" ("channel_data","room_id","messageable_type","messageable_id","content","data","deleted_at","created_at","updated_at","encrypt","is_discussion","ticket_id","user_id","channel_message_id") VALUES ('',1083260,'user',1524940,'','','0000-00-00 00:00:00','2024-06-25 14:20:29.091','2024-06-25 14:20:29.091',false,false,0,0,0) RETURNING "id"
+
+2024/06/25 14:20:29 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:89
+[23.753ms] [rows:1] SELECT * FROM "omnichannel"."interactions" WHERE userable_id = 1524940 and room_id = 1083260 and date(created_at) = '2024-06-25'
+
+2024/06/25 14:20:29 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:27
+[22.861ms] [rows:1] SELECT * FROM "omnichannel"."integrations" inner join omnichannel.channels on omnichannel.integrations.channel_id = omnichannel.channels.id WHERE omnichannel.integrations.app_id = 544 and omnichannel.channels.name = 'bot' and omnichannel.integrations.status = true
+
+2024/06/25 14:20:30 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:16
+[35.070ms] [rows:1] SELECT * FROM "omnichannel"."integrations" WHERE id = 1098 LIMIT 1
+
+2024/06/25 14:20:30 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:37
+[23.628ms] [rows:1] SELECT * FROM "app"."users" WHERE id = 1524940 LIMIT 1
+
+2024/06/25 14:20:30 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:47
+[48.915ms] [rows:1] SELECT * FROM "omnichannel"."rooms" WHERE created_by = 1524940 LIMIT 1
+
+2024/06/25 14:20:30 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:79 ERROR: invalid input syntax for type json (SQLSTATE 22P02)
+[48.943ms] [rows:0] INSERT INTO "omnichannel"."messages" ("channel_data","room_id","messageable_type","messageable_id","content","data","deleted_at","created_at","updated_at","encrypt","is_discussion","ticket_id","user_id","channel_message_id") VALUES ('',1083260,'user',1524940,'','','0000-00-00 00:00:00','2024-06-25 14:20:30.771','2024-06-25 14:20:30.771',false,false,0,0,0) RETURNING "id"
+
+2024/06/25 14:20:30 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:89
+[25.665ms] [rows:1] SELECT * FROM "omnichannel"."interactions" WHERE userable_id = 1524940 and room_id = 1083260 and date(created_at) = '2024-06-25'
+
+2024/06/25 14:20:31 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:27
+[18.572ms] [rows:1] SELECT * FROM "omnichannel"."integrations" inner join omnichannel.channels on omnichannel.integrations.channel_id = omnichannel.channels.id WHERE omnichannel.integrations.app_id = 544 and omnichannel.channels.name = 'bot' and omnichannel.integrations.status = true
+
+2024/06/25 14:20:32 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:16
+[32.749ms] [rows:1] SELECT * FROM "omnichannel"."integrations" WHERE id = 1098 LIMIT 1
+
+2024/06/25 14:20:32 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:37
+[16.677ms] [rows:1] SELECT * FROM "app"."users" WHERE id = 1524940 LIMIT 1
+
+2024/06/25 14:20:32 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:47
+[26.428ms] [rows:1] SELECT * FROM "omnichannel"."rooms" WHERE created_by = 1524940 LIMIT 1
+
+2024/06/25 14:20:32 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:79 ERROR: invalid input syntax for type json (SQLSTATE 22P02)
+[50.255ms] [rows:0] INSERT INTO "omnichannel"."messages" ("channel_data","room_id","messageable_type","messageable_id","content","data","deleted_at","created_at","updated_at","encrypt","is_discussion","ticket_id","user_id","channel_message_id") VALUES ('',1083260,'user',1524940,'','','0000-00-00 00:00:00','2024-06-25 14:20:32.286','2024-06-25 14:20:32.286',false,false,0,0,0) RETURNING "id"
+
+2024/06/25 14:20:32 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:89
+[23.447ms] [rows:1] SELECT * FROM "omnichannel"."interactions" WHERE userable_id = 1524940 and room_id = 1083260 and date(created_at) = '2024-06-25'
+
+2024/06/25 14:20:32 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:27
+[18.569ms] [rows:1] SELECT * FROM "omnichannel"."integrations" inner join omnichannel.channels on omnichannel.integrations.channel_id = omnichannel.channels.id WHERE omnichannel.integrations.app_id = 544 and omnichannel.channels.name = 'bot' and omnichannel.integrations.status = true
+
+2024/06/25 14:20:33 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:16
+[18.536ms] [rows:1] SELECT * FROM "omnichannel"."integrations" WHERE id = 1098 LIMIT 1
+
+2024/06/25 14:20:33 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:37
+[16.947ms] [rows:1] SELECT * FROM "app"."users" WHERE id = 1524940 LIMIT 1
+
+2024/06/25 14:20:33 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:47
+[17.426ms] [rows:1] SELECT * FROM "omnichannel"."rooms" WHERE created_by = 1524940 LIMIT 1
+
+2024/06/25 14:20:33 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:79 ERROR: invalid input syntax for type json (SQLSTATE 22P02)
+[50.289ms] [rows:0] INSERT INTO "omnichannel"."messages" ("channel_data","room_id","messageable_type","messageable_id","content","data","deleted_at","created_at","updated_at","encrypt","is_discussion","ticket_id","user_id","channel_message_id") VALUES ('',1083260,'user',1524940,'','','0000-00-00 00:00:00','2024-06-25 14:20:33.803','2024-06-25 14:20:33.803',false,false,0,0,0) RETURNING "id"
+
+2024/06/25 14:20:33 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:89
+[23.609ms] [rows:1] SELECT * FROM "omnichannel"."interactions" WHERE userable_id = 1524940 and room_id = 1083260 and date(created_at) = '2024-06-25'
+
+2024/06/25 14:20:34 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:27
+[18.485ms] [rows:1] SELECT * FROM "omnichannel"."integrations" inner join omnichannel.channels on omnichannel.integrations.channel_id = omnichannel.channels.id WHERE omnichannel.integrations.app_id = 544 and omnichannel.channels.name = 'bot' and omnichannel.integrations.status = true
+
+2024/06/25 14:20:38 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:16
+[75.256ms] [rows:1] SELECT * FROM "omnichannel"."integrations" WHERE id = 1098 LIMIT 1
+
+2024/06/25 14:20:38 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:37
+[17.294ms] [rows:1] SELECT * FROM "app"."users" WHERE id = 1524940 LIMIT 1
+
+2024/06/25 14:20:38 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:47
+[16.596ms] [rows:1] SELECT * FROM "omnichannel"."rooms" WHERE created_by = 1524940 LIMIT 1
+
+2024/06/25 14:20:38 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:79 ERROR: invalid input syntax for type json (SQLSTATE 22P02)
+[47.798ms] [rows:0] INSERT INTO "omnichannel"."messages" ("channel_data","room_id","messageable_type","messageable_id","content","data","deleted_at","created_at","updated_at","encrypt","is_discussion","ticket_id","user_id","channel_message_id") VALUES ('',1083260,'user',1524940,'','','0000-00-00 00:00:00','2024-06-25 14:20:38.356','2024-06-25 14:20:38.356',false,false,0,0,0) RETURNING "id"
+
+2024/06/25 14:20:38 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:89
+[25.264ms] [rows:1] SELECT * FROM "omnichannel"."interactions" WHERE userable_id = 1524940 and room_id = 1083260 and date(created_at) = '2024-06-25'
+
+2024/06/25 14:20:38 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:27
+[19.055ms] [rows:1] SELECT * FROM "omnichannel"."integrations" inner join omnichannel.channels on omnichannel.integrations.channel_id = omnichannel.channels.id WHERE omnichannel.integrations.app_id = 544 and omnichannel.channels.name = 'bot' and omnichannel.integrations.status = true
+
+2024/06/25 14:20:39 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:16
+[32.570ms] [rows:1] SELECT * FROM "omnichannel"."integrations" WHERE id = 1098 LIMIT 1
+
+2024/06/25 14:20:39 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:37
+[17.174ms] [rows:1] SELECT * FROM "app"."users" WHERE id = 1524940 LIMIT 1
+
+2024/06/25 14:20:39 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:47
+[16.984ms] [rows:1] SELECT * FROM "omnichannel"."rooms" WHERE created_by = 1524940 LIMIT 1
+
+2024/06/25 14:20:39 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:79 ERROR: invalid input syntax for type json (SQLSTATE 22P02)
+[49.787ms] [rows:0] INSERT INTO "omnichannel"."messages" ("channel_data","room_id","messageable_type","messageable_id","content","data","deleted_at","created_at","updated_at","encrypt","is_discussion","ticket_id","user_id","channel_message_id") VALUES ('',1083260,'user',1524940,'','','0000-00-00 00:00:00','2024-06-25 14:20:39.865','2024-06-25 14:20:39.865',false,false,0,0,0) RETURNING "id"
+
+2024/06/25 14:20:39 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:89
+[25.675ms] [rows:1] SELECT * FROM "omnichannel"."interactions" WHERE userable_id = 1524940 and room_id = 1083260 and date(created_at) = '2024-06-25'
+
+2024/06/25 14:20:40 /Users/user/Documents/kerja/webhook-lenna/repositories/webhookRepository/webchatRepository/webhookRepositoryImpl.go:27
+[17.625ms] [rows:1] SELECT * FROM "omnichannel"."integrations" inner join omnichannel.channels on omnichannel.integrations.channel_id = omnichannel.channels.id WHERE omnichannel.integrations.app_id = 544 and omnichannel.channels.name = 'bot' and omnichannel.integrations.status = true
