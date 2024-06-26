@@ -27,7 +27,7 @@ $ git clone `url_this_project`
 
 ***step 2***
 ```
-$ setup .env
+$ nano .env
 DB_USERNAME=
 DB_PASSWORD=
 DB_HOST=
