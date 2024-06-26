@@ -2,6 +2,7 @@ package main
 
 import (
 	"webhooklenna/apps"
+	"webhooklenna/helpers/handlers"
 	"webhooklenna/routes"
 	"webhooklenna/wire"
 
@@ -9,6 +10,7 @@ import (
 )
 
 func main() {
+	defer handlers.CatchPanicHandler()
 	app := fiber.New()
 	apps.InitConfigAll(app)
 	controller := wire.InitializeController()
